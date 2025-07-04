@@ -1,0 +1,293 @@
+:root {
+  --default-font: "Inter", "Segoe UI", Roboto, sans-serif;
+  --heading-font: "Playfair Display", serif;
+  --nav-font: "Poppins", sans-serif;
+
+  --background-color: #f6f5f3;
+  --default-color: #c18052;
+  --heading-color: #c18052;
+  --accent-color: #8c6239;
+  --surface-color: #ffffff;
+  --contrast-color: #ffffff;
+
+  --nav-color: #8b8b8b;
+  --nav-hover-color: #2c2c2c;
+
+  scroll-behavior: smooth;
+}
+
+/* Toàn bộ nền gỗ */
+body {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  background-image: url('https://www.transparenttextures.com/patterns/wood-pattern.png');
+  background-repeat: repeat;
+  font-family: var(--default-font);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--heading-color);
+  font-family: var(--heading-font);
+  font-weight: 600;
+}
+
+a {
+  color: var(--accent-color);
+  transition: 0.3s ease-in-out;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #6c4f2f;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+  position: relative;
+  background-image: url('assets/img/noithat1.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.hero::before,
+.hero .overlay {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1;
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  color: #fff;
+  text-align: center;
+}
+
+.hero-content h2 {
+  font-size: 40px;
+  font-family: var(--heading-font);
+}
+
+.typed-text {
+  font-size: 20px;
+  color: var(--accent-color);
+  font-weight: 500;
+}
+
+/* ===== Sidebar Tools ===== */
+.sidebar-tools {
+  position: fixed;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  z-index: 999;
+}
+
+.sidebar-tools ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-tools li {
+  margin: 15px 0;
+}
+
+.sidebar-tools a {
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  background-color: var(--accent-color);
+  color: #fff;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  transition: background 0.3s;
+}
+
+.sidebar-tools a:hover {
+  background-color: #6c4f2f;
+}
+
+/* ===== Sections ===== */
+section {
+  padding: 60px 0;
+  background-color: transparent; /* Giữ pattern gỗ */
+}
+
+.section-title h2 {
+  font-size: 32px;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.section-title h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--accent-color);
+  margin-top: 10px;
+}
+
+/* About Section */
+.about .content h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.about .content ul li {
+  margin-bottom: 10px;
+  font-weight: 500;
+  color: #555;
+}
+
+.about .content ul i {
+  color: var(--accent-color);
+  margin-right: 8px;
+}
+
+/* Service Section */
+.service-item {
+  background: #1e1e1e;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(255,255,255,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.service-item .icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  color: var(--contrast-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.service-item:hover .icon {
+  background-color: #6c4f2f;
+}
+
+/* Contact */
+.contact .info-item i {
+  color: var(--accent-color);
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.contact .php-email-form input,
+.contact .php-email-form textarea {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 10px;
+  width: 100%;
+  font-size: 15px;
+}
+
+.contact .php-email-form button[type=submit] {
+  background-color: var(--accent-color);
+  color: #fff;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+
+.contact .php-email-form button[type=submit]:hover {
+  background-color: #6c4f2f;
+}
+
+/* Footer */
+.footer {
+  background-color: #f1f1f1;
+  padding: 40px 0;
+  text-align: center;
+  color: #555;
+  font-size: 14px;
+  border-top: 1px solid #ddd;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-content h2 {
+    font-size: 28px;
+  }
+
+  .typed-text {
+    font-size: 18px;
+  }
+
+  .sidebar-tools {
+    display: none;
+  }
+}
+/* ========== Responsive Mobile Fix ========== */
+@media (max-width: 768px) {
+  /* Thu nhỏ chữ phần hero cho vừa màn hình */
+  .hero-content h2 {
+    font-size: 28px;
+  }
+
+  .typed-text {
+    font-size: 18px;
+  }
+
+  /* Ẩn sidebar bên trái trên điện thoại */
+  .sidebar-tools {
+    display: none;
+  }
+
+  /* Tự căn các phần dịch vụ cho dọc xuống */
+  .service-item {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  /* Avatar trong phần about cho co lại */
+  .about .col-lg-4 img {
+    width: 100%;
+    max-width: 240px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  /* Form contact căn lại padding */
+  .contact .form-control,
+  .contact textarea {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .contact .php-email-form button[type=submit] {
+    width: 100%;
+    padding: 12px;
+  }
+}
